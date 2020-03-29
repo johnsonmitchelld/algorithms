@@ -1,4 +1,4 @@
-# Algorithms Curriculum
+# Interview Prep Curriculum
 
 ## Haseeb Qureshi's [Tech Interview Study Guide](https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/)
 
@@ -44,13 +44,13 @@ Learn the basics of bit manipulation. Be able to explain what AND, OR, and XOR d
 
 Read about caches and cache efficiency. Know what a cache miss is. Know that reading from registers is lightning-fast, reading from the various caches is pretty fast, reading from memory is slow, and that reading from the hard disk is abysmally slow.
 
-From Hacker News: Learn how much slower it is to sum integers in a linked list than an array, and why (vectorized operations?) [SIMD processor operations](https://safari.ethz.ch/digitaltechnik/spring2019/lib/exe/fetch.php?media=digitaldesign-2019-lecture20-simd-afterlecture.pdf) allow you to perform the same operation on many values in an array simultaneously. Summing a linked list would require the processor to perform one add operation per element, then one operation to traverse the pointer. A naive implementation of the array sum would require only one add operation per element with no pointer traversal, but a SIMD-capable processor could sum many elements at once, reducing the number of cycles required by the number of elements the vectorized processing unit can handle at once. TODO: write a blog post on this
+From Hacker News: Learn how much slower it is to sum integers in a linked list than an array, and why (vectorized operations?)  CS students should know cache behaviour, SIMD-friendliness, branch prediction, multi-threaded programming, real-time constraints, hardware acceleration, etc. [SIMD processor operations](https://safari.ethz.ch/digitaltechnik/spring2019/lib/exe/fetch.php?media=digitaldesign-2019-lecture20-simd-afterlecture.pdf) allow you to perform the same operation on many values in an array simultaneously. Summing a linked list would require the processor to perform one add operation per element, then one operation to traverse the pointer. A naive implementation of the array sum would require only one add operation per element with no pointer traversal, but a SIMD-capable processor could sum many elements at once, reducing the number of cycles required by the number of elements the vectorized processing unit can handle at once. TODO: write a blog post on this
 
 Read how to implement an LRU cache, and then actually write one that gets and sets in worst-case O(1) time. This is a weirdly common interview problem.
 
 ### Databases
 
-Learn about SQL databases. Learn how to desi gn a SQL database schema; it comes up in interviews often. Read about ACID, the CAP theorem, and BASE (you don’t need to memorize the terms, just understand the concepts at a high level.) Understand why joins can become unscalable. Learn the basics of [NoSQL databases](https://www.youtube.com/watch?v=qI_g07C_Q5I).
+Learn about SQL databases. Learn how to design a SQL database schema; it comes up in interviews often. Read about ACID, the CAP theorem, and BASE (you don’t need to memorize the terms, just understand the concepts at a high level.) Understand why joins can become unscalable. Learn the basics of [NoSQL databases](https://www.youtube.com/watch?v=qI_g07C_Q5I).
 
 ### Web Development
 

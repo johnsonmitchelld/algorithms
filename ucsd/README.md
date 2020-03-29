@@ -4,10 +4,15 @@ Curriculum for the UCSD [Data Structures and Algorithms Specialization](https://
 
 ## Algorithmic Toolbox
 1.	Programming Challenges
-    - [ ] test
 2.	Algorithmic Warm-up
 3.	Greedy Algorithms
 4.	Divide-and-Conquer
+    - [ ] **binary search**
+    - [ ] majority element
+    - [ ] **improving quick sort**
+    - [ ] number of inversions
+    - [ ] organizing a lottery
+    - [ ] **closest points**
 5.	Dynamic Programming 1
 6.	Dynamic Programming 2
 ## Data Structures
