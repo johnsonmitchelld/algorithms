@@ -8,14 +8,16 @@ using std::vector;
 
 int binary_search_recursive(const vector<int> &a, int x, int lo, int hi) {
   int mid = (lo + hi) / 2;
-  if (x == a[hi]){
-    return hi;
-  }
-  else if (x == a[mid]){
+  if (x == a[mid]){
     return mid;
   }
   else if (mid == lo){
-    return -1;
+    if (x == a[hi]){
+      return hi;
+    }
+    else {
+      return -1;
+    }
   }
   else if (x > a[mid]){
     return binary_search_recursive(a, x, mid, hi);
@@ -23,6 +25,31 @@ int binary_search_recursive(const vector<int> &a, int x, int lo, int hi) {
   else if (x < a[mid]){
     return binary_search_recursive(a, x, lo, mid);
   }
+}
+
+int binary_search_iterative(const vector<int> &a, int x) {
+  int lo = 0;
+  int hi = a.size() - 1;
+  int mid = 1;
+  while (hi - lo > 1){
+    mid = (hi + lo) / 2;
+    if (x == a[mid]){
+      return mid;
+    }
+    else if (x > a[mid]){
+      lo = mid;
+    }
+    else if (x < a[mid]){
+      hi = mid;
+    }
+  }
+  if(x == a[lo]){
+    return lo;
+  }
+  if(x == a[hi]){
+    return hi;
+  }
+  return -1;
 }
 
 int linear_search(const vector<int> &a, int x) {
@@ -46,12 +73,10 @@ int main() {
     std::cin >> b[i];
   }
   for (int i = 0; i < m; ++i) {
-    //replace with the call to binary_search when implemented
-    //std::cout << linear_search(a, b[i]) << ' ';
-    std::cout << binary_search_recursive(a, b[i], 0, a.size() - 1) << ' ';
-
+    //std::cout << binary_search_recursive(a, b[i], 0, a.size() - 1) << ' ';
+    std::cout << binary_search_iterative(a, b[i]) << ' ';
   }
   std::cout << "\n";
   system("pause");
 }
- 
+  

@@ -7,7 +7,9 @@ Curriculum for the UCSD [Data Structures and Algorithms Specialization](https://
 2.	Algorithmic Warm-up
 3.	Greedy Algorithms
 4.	Divide-and-Conquer
-    - [ ] **binary search**
+    - [x] **binary search**
+        - [x] iterative
+        - [x] recursive
     - [ ] majority element
     - [ ] **improving quick sort**
     - [ ] number of inversions
