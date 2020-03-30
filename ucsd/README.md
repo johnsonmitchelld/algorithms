@@ -11,7 +11,7 @@ Curriculum for the UCSD [Data Structures and Algorithms Specialization](https://
         - [x] iterative
         - [x] recursive
     - [ ] majority element
-    - [ ] **improving quick sort**
+    - [x] **improving quick sort**
     - [ ] number of inversions
     - [ ] organizing a lottery
     - [ ] **closest points**
