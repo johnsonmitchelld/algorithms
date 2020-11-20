@@ -14,9 +14,17 @@ Curriculum for the UCSD [Data Structures and Algorithms Specialization](https://
     - [x] **improving quick sort**
     - [ ] number of inversions
     - [ ] organizing a lottery
-    - [ ] **closest points**
+    - [x] **closest points**
 5.	Dynamic Programming 1
+    - [ ] Money Change
+    - [ ] Primitive Calculator
+    - [ ] **Edit Distance**
+    - [ ] **Longest Common Subsequence (2 strings)**
+    - [ ] **Longest Common Subsequence (3 strings)**
 6.	Dynamic Programming 2
+    - [ ] **Maximum Amount of gold**
+    - [ ] Partitioning Souvenirs
+    - [ ] **Maximum Value of an Arithmetic Expression**
 ## Data Structures
 1.	Basic Data Structures
 2.	Dynamic Arrays and Amortized Analysis
