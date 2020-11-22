@@ -1,28 +1,27 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "type": "shell",
-            "label": "cl.exe build active file",
-            "command": "cl.exe",
-            "args": [
-                "/Zi",
-                "/EHsc",
-                "/Fo:",
-                "${fileDirname}\\build\\${fileBasenameNoExtension}.obj",
-                "/Fd:",
-                "${fileDirname}\\build\\${fileBasenameNoExtension}.pdb",
-                "/Fe:",
-                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
-                "${file}"
-            ],
-            "problemMatcher": [
-                "$msCompile"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "g++ build active file",
+			"command": "/bin/g++",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${workspaceFolder}/debug/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /bin/g++"
+		}
+	]
 }

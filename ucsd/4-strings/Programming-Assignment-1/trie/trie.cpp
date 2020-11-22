@@ -12,7 +12,23 @@ typedef vector<edges> trie;
 
 trie build_trie(vector<string> & patterns) {
   trie t;
-  // write your code here
+  edges root;
+  t.push_back(root);
+  edges* curNode;
+  for (auto pattern: patterns) {
+    curNode = &t[0];  
+    for(char c: pattern) {
+      if(curNode->find(c) != curNode->end()){
+        curNode = &t[curNode->operator[](c)];
+      }
+      else {
+        curNode->insert(std::pair<char, int>(c, t.size()));
+        edges newNode;
+        t.push_back(newNode);
+        curNode = &t[t.size() - 1];
+      }
+    }
+  }
   return t;
 }
 
