@@ -37,11 +37,53 @@ int letterToIndex (char letter)
 	}
 }
 
+vector<Node> buildTrie(const vector <string>& patterns) {
+	vector <Node> trie(1);
+	int index = 0;
+	for (auto pattern: patterns) {
+		index = 0;
+		for (auto c: pattern) {
+			Node& curNode = trie[index];
+			if (curNode.next[letterToIndex(c)] == NA) {
+				index = trie.size();
+				curNode.next[letterToIndex(c)] = index;
+				Node newNode;
+				trie.push_back(newNode);
+			}
+			else {
+				index = curNode.next[letterToIndex(c)];
+			}
+		}
+	}
+	return trie;
+}
+
 vector <int> solve (const string& text, int n, const vector <string>& patterns)
 {
 	vector <int> result;
 
-	// write your code here
+	vector<Node> trie = buildTrie(patterns);
+	
+	int curChar = 0;
+
+	for (int patternStart = 0; patternStart < text.length(); patternStart++) {
+		curChar = patternStart;
+		int trieIndex = 0;
+		while(true) {
+			Node& curNode = trie[trieIndex];
+			if (curNode.isLeaf()) {
+				result.push_back(patternStart);
+				break;
+			}
+			else if (curChar < text.length() && curNode.next[letterToIndex(text.at(curChar))] != NA){
+				trieIndex = curNode.next[letterToIndex(text.at(curChar))];
+				curChar++;
+			}
+			else {
+				break;
+			}
+		}
+	}
 
 	return result;
 }
