@@ -1,10 +1,6 @@
 # Interview Prep Curriculum
 
-Compiled from:
-
-Haseeb Qureshi's [Tech Interview Study Guide](https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/)
-
-Steve Yegge's [Get That Job at Google](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+Compiled from Haseeb Qureshi's [Tech Interview Study Guide](https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/) and Steve Yegge's [Get That Job at Google](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html).
 
 ## Data Structures
 
